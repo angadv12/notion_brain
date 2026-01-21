@@ -37,7 +37,7 @@ def analyze_task(text: str) -> TaskExtraction:
 	- Timezone: US Eastern Time (New York)
 
 	**INSTRUCTIONS:**
-	1. **Category**: Pick one of ["Errand", "Health & Life", "University Work", "Extracurricular Work", "Chores", 
+	1. **Category**: Pick one of ["Errand/Planning", "Health & Life", "University Work", "Extracurricular Work", "Chores", 
 		   		"Hobby", "Social Event", "Physical Activity"].
     2. **Priority**: [High, Medium, Low].
     3. **Due Date**: Extract the absolute ISO 8601 date/time (YYYY-MM-DDTHH:MM:SS). 
