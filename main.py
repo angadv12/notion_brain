@@ -14,9 +14,14 @@ async def receive_webhook(payload: dict):
 	
 	event = NotionEvent(**raw_data)
 
-	print(f"\n--- New Input: {event.title} ---")
+	if not event.title.strip().endswith("$"):
+		return {"status": "ignored"}
 
-	ai_decision = services.analyze_task(event.title)
+	clean_title = event.title.strip().rstrip("$").strip()
+
+	print(f"\n--- New Input: {clean_title} ---")
+
+	ai_decision = services.analyze_task(clean_title)
 
 	if ai_decision:
 		await services.update_notion_task(event.id, ai_decision)
