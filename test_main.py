@@ -38,7 +38,15 @@ ignored_payload = {
 def test_webhook_triggers_with_dollar(mock_parse, mock_analyze, mock_update):
     # Setup mocks
     mock_parse.return_value = {"id": "123", "title": "Finish report by Friday $"}
-    mock_analyze.return_value = {"summary": "Report Friday"}
+    mock_analyze.return_value = {
+        "category": "University Work",
+        "priority": "High",
+        "due_date_iso": "2026-01-23T17:00:00",
+        "summary": "Report Friday",
+        "urgency_level": 5,
+        "importance_level": 4,
+        "priority_rationale": "High urgency due to deadline."
+    }
     
     response = client.post("/webhook", json=valid_payload)
     
