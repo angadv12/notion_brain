@@ -39,14 +39,20 @@ def analyze_task(text: str) -> TaskExtraction:
 	**INSTRUCTIONS:**
 	1. **Category**: Pick one of ["Errand/Planning", "Health & Life", "University Work", "Extracurricular Work", "Chores", 
 		   		"Hobby", "Social Event", "Physical Activity"].
-    2. **Priority**: [High, Medium, Low].
-    3. **Due Date**: Extract the absolute ISO 8601 date/time (YYYY-MM-DDTHH:MM:SS). 
-       - Assume "tomorrow" is relative to the current date.
-       - If a time is mentioned (e.g., "at 5pm"), include it.
-       - If NO time is mentioned, default to 23:59:00 (End of Day).
-       - Return null if no date is found.
-    4. **Summary**: A crisp 3-5 word title for the task.
-    5. **Is Urgent**: True if the language implies stress or immediate deadlines.
+	2. **Priority**: Pick one of ["High", "Medium", "Low"] using this rubric.
+	   - High: hard deadline within a day or slightly more, serious consequences, or blocks others.
+	   - Medium: deadline within a week, or important but not time-critical.
+	   - Low: either no deadline, optional "someday" tasks, or seem low impact.
+	   - If ambiguous or no deadline, default to Low (not Medium).
+	3. **Due Date**: Extract the absolute ISO 8601 date/time (YYYY-MM-DDTHH:MM:SS).
+	   - Assume "tomorrow" is relative to the current date.
+	   - If a time is mentioned (e.g., "at 5pm"), include it.
+	   - If NO time is mentioned, default to 23:59:00 (End of Day).
+	   - Return null if no date is found.
+	4. **Summary**: A crisp 3-7 word title for the task.
+	5. **Urgency Level**: Integer 1-5 (1 = not time-sensitive, 5 = immediate/overdue).
+	6. **Importance Level**: Integer 1-5 (1 = low impact, 5 = high impact).
+	7. **Priority Rationale**: One sentence tying urgency, importance, and timeframe to the priority.
     """
 
 	try:

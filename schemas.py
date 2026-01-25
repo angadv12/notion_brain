@@ -12,4 +12,6 @@ class TaskExtraction(TypedDict):
     priority: str
     due_date_iso: str | None
     summary: str
-    is_urgent: bool
+    urgency_level: int
+    importance_level: int
+    priority_rationale: str
