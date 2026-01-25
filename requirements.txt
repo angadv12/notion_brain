@@ -4,5 +4,6 @@ transformers
 torch
 httpx
 python-dotenv
-dateparserpytest
+dateparser
+pytest
 pytest-asyncio
