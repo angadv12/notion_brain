@@ -1,9 +1,7 @@
 fastapi
 uvicorn
-transformers
-torch
 httpx
 python-dotenv
-dateparser
-pytest
-pytest-asyncio
+google-genai
+pydantic
+typing-extensions
