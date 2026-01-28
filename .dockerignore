@@ -1,0 +1,15 @@
+# .dockerignore
+__pycache__
+.pytest_cache
+.gemini/
+.brv/
+.github/
+agent_docs/
+*.pyc
+.env
+.git
+venv/
+test/
+.aider.tags.cache.v4/
+.aider.chat.history/
+.aider.input.history/
