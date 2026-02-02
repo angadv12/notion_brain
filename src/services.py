@@ -53,6 +53,7 @@ def analyze_task(text: str) -> TaskExtraction:
 	5. **Urgency Level**: Integer 1-5 (1 = not time-sensitive, 5 = immediate/overdue).
 	6. **Importance Level**: Integer 1-5 (1 = low impact, 5 = high impact).
 	7. **Priority Rationale**: One sentence tying urgency, importance, and timeframe to the priority.
+	8. **Additional Notes**: Don't be dense in your rewording of the task. Example: If I say "do the dishes", don't say "complete the dishes", it doesn't make much sense.
     """
 
 	try:
