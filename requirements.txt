@@ -5,3 +5,7 @@ python-dotenv
 google-genai
 pydantic
 typing-extensions
+pydantic-settings
+twilio
+pytest
+pytest-asyncio
