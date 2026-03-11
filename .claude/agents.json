@@ -1,0 +1,46 @@
+{
+  "agents": [
+    {
+      "name": "backend",
+      "description": "Backend development specialist - FastAPI, async/await, service architecture",
+      "skills": ["skills/backend_agent.md"],
+      "context_files": ["src/main.py", "src/services.py", "src/config.py"]
+    },
+    {
+      "name": "ai-prompt",
+      "description": "AI and prompt engineering specialist - Gemini API, structured output",
+      "skills": ["skills/ai_prompt_agent.md"],
+      "context_files": ["src/services.py", "src/schemas.py"]
+    },
+    {
+      "name": "notion-api",
+      "description": "Notion API specialist - Data Sources API, filters, properties",
+      "skills": ["skills/notion_api_agent.md"],
+      "context_files": ["src/services.py", "src/task_queries.py", "src/schemas.py"]
+    },
+    {
+      "name": "testing",
+      "description": "Testing specialist - pytest, mocking, test coverage",
+      "skills": ["skills/testing_agent.md"],
+      "context_files": ["test/"]
+    },
+    {
+      "name": "documentation",
+      "description": "Documentation specialist - Markdown, CLAUDE.md, README",
+      "skills": ["skills/documentation_agent.md"],
+      "context_files": ["CLAUDE.md", "README.md"]
+    },
+    {
+      "name": "devops",
+      "description": "DevOps specialist - Docker, Railway, cron, environment variables",
+      "skills": ["skills/devops_agent.md"],
+      "context_files": ["Dockerfile", "Dockerfile.worker", "railway.json", "requirements.txt"]
+    },
+    {
+      "name": "nlp",
+      "description": "NLP specialist - Regex, keyword extraction, relationship patterns",
+      "skills": ["skills/nlp_agent.md"],
+      "context_files": ["src/main.py"]
+    }
+  ]
+}
